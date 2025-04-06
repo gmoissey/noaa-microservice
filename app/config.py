@@ -5,4 +5,4 @@ load_dotenv()
 
 class Config:
     DEBUG = os.getenv('DEBUG', 'True') == 'True'
-    SECRET_KEY = os.getenv('SECRET_KEY', 'your-default-secret-key')
+    NOAA_API_TOKEN = os.getenv('NOAA_API_TOKEN', 'your-default-secret-key')
