@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  weather_microservice:
+    build: .
+    container_name: weather_microservice
+    ports:
+      - "5001:5001"
+    depends_on:
+      - mongo
+    environment:
+      MONGO_URI: "mongodb://mongo:27017/weather_api_db"
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
