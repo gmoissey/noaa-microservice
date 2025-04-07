@@ -5,4 +5,4 @@ load_dotenv()
 
 class Config:
     DEBUG = os.getenv('DEBUG', 'True') == 'True'
-    NOAA_API_TOKEN = os.getenv('NOAA_API_TOKEN', 'your-default-secret-key')
+    MONGO_URI = os.getenv('MONGO_URI', 'mongodb://mongo:27017/weather_api_db')
