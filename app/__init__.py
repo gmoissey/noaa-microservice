@@ -1,10 +1,13 @@
 from flask import Flask, g
+from flask_cors import CORS
 from pymongo import MongoClient
 from .config import Config
 
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
+
+    CORS(app)
     
     # MongoDB setup
     mongo_uri = app.config.get('MONGO_URI', 'mongodb://mongo:27017/weather_api_db')  # Fallback if not in Config

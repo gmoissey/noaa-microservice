@@ -5,6 +5,7 @@ click==8.1.8
 dnspython==2.7.0
 dotenv==0.9.9
 Flask==3.1.0
+flask-cors==5.0.1
 Flask-PyMongo==3.0.1
 idna==3.10
 iniconfig==2.1.0
