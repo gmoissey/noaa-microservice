@@ -43,8 +43,8 @@ def get_requests():
         if limit < 1:
             return jsonify({'error': 'Limit must be at least 1'}), HTTPStatus.BAD_REQUEST
 
-        # Fetch most recent requests, sorted by timestamp descending
-        recent_requests = g.db.requests.find().sort('timestamp', -1).limit(limit)
+        # Fetch most recent requests, sorted by timestamp ascending
+        recent_requests = g.db.requests.find().sort('timestamp', 1).limit(limit)
         
         # Convert MongoDB documents to JSON-serializable format
         requests_list = [
