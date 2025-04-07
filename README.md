@@ -84,7 +84,7 @@ To run the frontend, follow these steps:
 3. Run the frontend:
 
    ```bash
-   next dev
+   npm run dev
    ```
 
 4. Access the frontend at `http://localhost:3000/`.
